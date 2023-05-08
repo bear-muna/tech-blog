@@ -1,0 +1,18 @@
+[
+    {
+        "description" : "Just got a FacebooK!",
+        "user_id" : 1
+    },
+    {
+        "description" : "Just read the latest TLDR post",
+        "user_id" : 2
+    },
+    {
+        "description" : "Trying to figure out what I should make for my next project!",
+        "user_id" : 3
+    },
+    {
+        "description" : "RTX 4080 prices dropped",
+        "user_id" : 4
+    }
+]
