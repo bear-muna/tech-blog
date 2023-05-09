@@ -26,7 +26,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-// TODO: GET user dashboard
 router.get('/dashboard', async (req, res) => {
     try {
         const dbPostData = await Post.findAll({
@@ -47,15 +46,24 @@ router.get('/dashboard', async (req, res) => {
     }
 })
 
+// TODO: GET comments 
 // GET one post
 router.get('/posts/:id', async (req, res) => {
     try {
         const dbPostData = await Post.findByPk(req.params.id, {
             include: [
                 {
-                    model: User,
-                }, 
-            ],
+                    model: User, 
+                },
+                {
+                    model: Comment,
+                    include: [
+                        {
+                            model: User
+                        }
+                    ]
+                }
+            ]
         });
 
         const post = dbPostData.get({ plain: true });

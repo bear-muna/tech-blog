@@ -4,6 +4,9 @@
         <p>{{post.description}}</p>
         <p>{{post.time_created}}</p>
     </section>
+    {{#each post.Comments}}
+    {{> comment-details}}
+    {{/each}}
     {{#if loggedIn}}
     <button id="comment">Comment</button>
     {{else}}
