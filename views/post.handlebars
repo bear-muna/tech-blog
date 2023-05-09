@@ -1,0 +1,12 @@
+<section class="post">
+    <header>{{post.User.username}}</header>
+    <section>
+        <p>{{post.description}}</p>
+        <p>{{post.time_created}}</p>
+    </section>
+    {{#if loggedIn}}
+    <button id="comment">Comment</button>
+    {{else}}
+    <a href="/api/users/login">Login to Comment</a>
+    {{/if}}
+</section>

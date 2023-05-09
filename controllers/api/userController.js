@@ -42,4 +42,6 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// TODO: Create a sign up user
+
 module.exports = router;
