@@ -8,8 +8,22 @@
     {{> comment-details}}
     {{/each}}
     {{#if loggedIn}}
-    <button id="comment">Comment</button>
+    <section>
+        <form class="comment-form">
+            <section>
+                <label for="comment">Add a comment:</label>
+                <input class="form-input" type="text" id="comment-input">
+            </section>
+            <section>
+                <button type="submit">Comment</button>
+            </section>
+        </form>
+    </section>
     {{else}}
     <a href="/login">Login to Comment</a>
     {{/if}}
 </section>
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
