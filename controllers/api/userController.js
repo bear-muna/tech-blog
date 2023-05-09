@@ -31,6 +31,25 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Signup
+router.post('/', async (req, res) => {
+    try {
+        const dbUserData = await User.create({
+            username: req.body.username,
+            password: req.body.password,
+        });
+
+        req.session.save(() => {
+            req.session.loggedIn = true;
+
+            res.status(200).json(dbUserData);
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ msg: "Error loading", error })
+    }
+})
+
 // Logout
 router.post('/logout', (req, res) => {
     console.log('check');
