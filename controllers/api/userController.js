@@ -22,7 +22,7 @@ router.post('/login', async (req, res) => {
 
         req.session.save(() => {
             req.session.loggedIn = true;
-
+            req.session.userId = dbUserData.id;
             res.status(200).json({ user: dbUserData, msg: "You are now logged in!" });
         });
     } catch (error) {
@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
 
         req.session.save(() => {
             req.session.loggedIn = true;
-
+            req.session.userId = dbUserData.id;
             res.status(200).json(dbUserData);
         })
     } catch (error) {
@@ -61,7 +61,5 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
-
-// TODO: Create a sign up user
 
 module.exports = router;
