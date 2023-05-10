@@ -1,3 +1,4 @@
+// Creates a comment in front end and sends to backend
 const addComment = async (e) => {
     e.preventDefault();
     

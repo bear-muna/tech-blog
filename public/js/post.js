@@ -1,4 +1,5 @@
-const addComment = async (e) => {
+// Sends a request to back end to create a post
+const addPost = async (e) => {
     e.preventDefault();
     
     const pathName = window.location.pathname.split('');
@@ -20,4 +21,4 @@ const addComment = async (e) => {
     }
 };
 
-document.querySelector('.post-form').addEventListener('submit', addComment);
+document.querySelector('.post-form').addEventListener('submit', addPost);

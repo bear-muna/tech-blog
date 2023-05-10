@@ -1,3 +1,4 @@
+// Updates a post in the front end to send to back end
 const updatePost = async (e) => {
     e.preventDefault();
 
@@ -20,6 +21,7 @@ const updatePost = async (e) => {
     }
 }
 
+// Sends a request to delete post in the back end
 const deletePost = async (e) => {
     e.preventDefault();
 

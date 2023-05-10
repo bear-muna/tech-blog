@@ -1,3 +1,4 @@
+// Sends request to back end to logout
 const logout = async (e) => {
   e.preventDefault();
   console.log("TESTING");
