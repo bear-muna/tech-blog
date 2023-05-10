@@ -194,7 +194,8 @@ body {
     width: 40%;
 }
 
-#login-signup {
+#login-signup,
+.edit-post {
     border: var(--border);
     height: 90%;
     width: 90%;

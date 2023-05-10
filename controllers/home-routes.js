@@ -29,18 +29,23 @@ router.get('/', async (req, res) => {
 // Dashboard of user posts
 router.get('/dashboard', async (req, res) => {
     try {
-        const dbPostData = await Post.findAll({
-            where: {
-                user_id: req.session.userId
-            },
-            include: [
-                {
-                    model: User,
+        if (req.session.loggedIn) {
+            const dbPostData = await Post.findAll({
+                where: {
+                    user_id: req.session.userId
                 },
-            ],
-        });
-        const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
+                include: [
+                    {
+                        model: User,
+                    },
+                ],
+            });
+            const posts = dbPostData.map((post) => post.get({ plain: true }));
+            res.render('dashboard', { posts, loggedIn: req.session.loggedIn });
+        } else {
+            res.redirect('/login');
+        }
+        
     } catch (error) {
         console.log(error);
         res.status(500).json({ msg: "Error loading", error });

@@ -1,18 +1,25 @@
-<section>
-    <form class="edit-form">
-        <section>
+{{#if loggedIn}}
+<section class="edit-post">
+    <form class="form edit-form">
+        <section class="form-sec">
             <label for="description">Description:</label>
-            <input type="text" id="edit-description" value="{{post.description}}">
+            <input class="form-input" type="text" id="edit-description" value="{{post.description}}">
         </section>
-        <section>
+        <section class="form-sec">
             <label for="time">Created on: {{post.time_created}}</label>
         </section>
-        <section>
+        <section class="form-sec">
             <label for="username">Created by: {{post.User.username}}</label>
         </section>
-        <button type="submit">Update</button>
-        <button type="button">Delete</button>
+        <section class="btn-sec">
+            <button class="button-tag" type="submit">Update</button>
+            <button class="button-tag" type="button">Delete</button>
+        </section>
     </form>
 </section>
 
 <script src="/js/edit.js"></script>
+
+{{else}}
+<a href="/login">Login to edit your post</a>
+{{/if}}
