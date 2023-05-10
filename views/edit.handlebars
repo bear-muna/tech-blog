@@ -6,7 +6,7 @@
             <input class="form-input" type="text" id="edit-description" value="{{post.description}}">
         </section>
         <section class="form-sec">
-            <label for="time">Created on: {{post.time_created}}</label>
+            <label for="time">Created on: {{format_date post.time_created}}</label>
         </section>
         <section class="form-sec">
             <label for="username">Created by: {{post.User.username}}</label>

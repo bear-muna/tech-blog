@@ -1,7 +1,7 @@
 <section class="card">
     <section class="card-tag">
         <header class="card-description">{{post.description}}</header>
-        <p class="card-time">Created on: {{post.time_created}}</p>
+        <p class="card-time">Created on: {{format_date post.time_created}}</p>
         <p class="card-username">Created by: {{post.User.username}}</p>
     </section>
 </section>
