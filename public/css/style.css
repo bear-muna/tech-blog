@@ -151,7 +151,8 @@ body {
     color: var(--sec-text);
 }
 
-#add-comment {
+.add-comment,
+.add-post {
     width: 60%;
     height: 20%;
     display: flex;
@@ -161,7 +162,8 @@ body {
     background: var(--sec-background);
 }
 
-.comment-form {
+.comment-form,
+.post-form {
     width: 90%;
     display: flex;
     border-radius: 10px;
@@ -182,6 +184,7 @@ body {
     align-items: center;
 }
 
+.post-label,
 .comment-label {
     font-size: 20px;
 }

@@ -1,3 +1,19 @@
 {{#each posts as |post|}}
 {{> post-details}}
 {{/each}}
+
+{{#if loggedIn}}
+<section class="add-post">
+    <form class="post-form">
+        <section class="input-text">
+            <label class="post-label" for="post">Create a post:</label>
+            <input class="form-input" type="text" id="post-input">
+        </section>
+        <section>
+            <button class="button-tag" type="submit">Post</button>
+        </section>
+    </form>
+</section>
+
+<script src="/js/post.js"></script>
+{{/if}}
