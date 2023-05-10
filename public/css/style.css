@@ -241,8 +241,8 @@ body {
 
 .btn-sec {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 10%;
-    width: 20%;
+    width: 50%;
 }
