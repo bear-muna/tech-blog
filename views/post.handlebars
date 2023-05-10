@@ -11,14 +11,14 @@
     {{/each}}
 </section>
 {{#if loggedIn}}
-<section>
+<section id="add-comment">
     <form class="comment-form">
-        <section>
-            <label for="comment">Add a comment:</label>
+        <section class="input-text">
+            <label class="comment-label" for="comment">Add a comment:</label>
             <input class="form-input" type="text" id="comment-input">
         </section>
         <section>
-            <button type="submit">Comment</button>
+            <button class="button-tag" type="submit">Comment</button>
         </section>
     </form>
 </section>
