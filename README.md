@@ -17,6 +17,7 @@ In order to install this application, you will need to install node.js, npm pack
 This application allows you to view, create, edit, and delete blog posts as a user. First, you will need to login/signup to the application. Once you signup, you will be able to create blog posts within your dashboard. You can also view other users' blog posts and leave comments.
 
 ## Screen Recording
+![Demo of App](./screenrecording/Untitled_%20May%209%2C%202023%2010_26%20PM.gif)
 
 ## Links
 Github Repository: https://github.com/bear-muna/tech-blog
