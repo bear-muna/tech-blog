@@ -1,0 +1,87 @@
+:root {
+    --main-background: rgb(159, 117, 117);
+    --sec-background: rgb(101, 37, 37);
+    --sec-text: white;
+    --card-background: rgb(164, 140, 109);
+    --border: 1px solid black;
+}
+
+body {
+    background: var(--main-background);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main-header {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+#main-nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+#main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    padding: 2%;
+    border-radius: 10px;
+    background: var(--sec-background);
+    color: var(--sec-text);
+}
+
+#home-tag, 
+#dashboard-tag, 
+.logout-tag, 
+#login-tag {
+    font-size: 24px;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--sec-text);
+    color: var(--sec-background);
+}
+
+#home-tag:hover, 
+#dashboard-tag:hover, 
+.logout-tag:hover, 
+#login-tag:hover {
+    color: red;
+}
+
+#main-body {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--sec-text);
+}
+
+.card {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: var(--card-background);
+}
