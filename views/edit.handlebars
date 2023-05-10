@@ -1,0 +1,18 @@
+<section>
+    <form class="edit-form">
+        <section>
+            <label for="description">Description:</label>
+            <input type="text" id="edit-description" value="{{post.description}}">
+        </section>
+        <section>
+            <label for="time">Created on: {{post.time_created}}</label>
+        </section>
+        <section>
+            <label for="username">Created by: {{post.User.username}}</label>
+        </section>
+        <button type="submit">Update</button>
+        <button type="button">Delete</button>
+    </form>
+</section>
+
+<script src="/js/edit.js"></script>
