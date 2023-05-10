@@ -2,11 +2,13 @@ const updatePost = async (e) => {
     e.preventDefault();
 
     const editDescription = document.querySelector('#edit-description').value.trim(); 
+    const pathName = window.location.pathname.split('');
+    const index = pathName[pathName.length - 1];
 
     if (editDescription) {
-        const response = await fetch('/api/post', {
+        const response = await fetch('/api/posts', {
             method: 'PUT',
-            body: JSON.stringify({ editDescription }),
+            body: JSON.stringify({ editDescription, index }),
             headers: { 'Content-Type': 'application/json' },
         });
 

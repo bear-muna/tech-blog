@@ -15,4 +15,24 @@ router.post('/', async (req, res) => {
     }
 });
 
+// Update post
+router.put('/', async (req, res) => {
+    try {
+        const updatePost = await Post.update({
+            description: req.body.editDescription,
+        }, {
+            where: {
+                id: req.body.index
+            }
+        });
+        if (!updatePost[0]) {
+            return res.status(404).json({ msg: "Post is not found" });
+        }
+        res.json(updatePost);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ msg: "Error updating post", error });
+    }
+});
+
 module.exports = router;

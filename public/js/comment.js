@@ -1,5 +1,6 @@
 const addComment = async (e) => {
     e.preventDefault();
+    
     const pathName = window.location.pathname.split('');
     const index = pathName[pathName.length - 1];
     const description = document.querySelector('#comment-input').value.trim();
