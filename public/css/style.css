@@ -87,6 +87,7 @@ body {
     height: 20%;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 10px;
     padding: 5px 10px;
     background: var(--card-background);
@@ -98,6 +99,7 @@ body {
 
 .card-tag {
     width: 90%;
+    height: 90%;
     display: flex;
     border-radius: 10px;
     flex-direction: column;
